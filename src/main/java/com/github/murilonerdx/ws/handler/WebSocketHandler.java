@@ -16,18 +16,15 @@ public class WebSocketHandler extends TextWebSocketHandler {
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         log.info("[afterConnectionEstablished session id " + session.getId());
-        super.afterConnectionEstablished(session);
     }
 
     @Override
     public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
         log.info("[handleMessage session id " + session.getId());
-        super.handleMessage(session, message);
     }
 
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
         log.info("[afterConnectionClosed session id " + session.getId());
-        super.afterConnectionClosed(session, status);
     }
 }
