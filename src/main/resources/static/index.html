@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input type="text" name="" id="message" placeholder="Digite sua mensagem">
+    <input type="button" value="Enviar" id="btn-message">
+</div>
+    <script>
+        var ws = new WebSocket("ws://localhost:8080/chat")
+        var message = document.getElementById("message")
+        var btnEnviar = document.getElementById("btn-message")
+
+        btnEnviar.onclick = function(){
+            ws.send(message)
+            console.log(message)
+        }
+
+    </script>
+</body>
+</html>
